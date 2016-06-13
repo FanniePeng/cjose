@@ -70,29 +70,32 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>C:\Users\Wayne\Desktop\cjose\thirdparty\openssl\include\openssl;C:\Users\Wayne\Desktop\cjose\src\include\cjose;C:\Users\Wayne\Desktop\cjose\src\src\include;C:\Users\Wayne\Desktop\cjose\thirdparty\jansson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CJOSEDLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\thirdparty\openssl\include;..\..\src\include\;..\..\src\src\include;..\..\thirdparty\jansson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CJOSEDLL_EXPORTS;inline=__inline;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>ssleay32.lib;libeay32.lib;jansson_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Wayne\Desktop\cjose\thirdparty\openssl\lib;C:\Users\Wayne\Desktop\cjose\thirdparty\jansson\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\thirdparty\openssl\lib;..\..\thirdparty\jansson\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ForceFileOutput>Enabled</ForceFileOutput>
       <SubSystem>Windows</SubSystem>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>..\..\thirdparty\openssl\include;..\..\src\include\;..\..\src\src\include;..\..\thirdparty\jansson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CJOSEDLL_EXPORTS;inline=__inline;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;CJOSEDLL_EXPORTS;inline=__inline;inline=__inline;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>ssleay32.lib;libeay32.lib;jansson_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Wayne\Desktop\cjose\thirdparty\openssl\lib;C:\Users\Wayne\Desktop\cjose\thirdparty\jansson\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\thirdparty\openssl\lib;..\..\thirdparty\jansson\lib\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ForceFileOutput>Enabled</ForceFileOutput>
       <SubSystem>Windows</SubSystem>
     </Link>
